@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Your Pokemon Collection</h2>
+    <ul>
+        {% for pokemon in user.pokemons %}
+            <li>{{ pokemon.pokemon.name }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
